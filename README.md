@@ -29,10 +29,10 @@ Here is our Monster class (Unity):
 Getting random Strength, Intelligence and Charisma is possible by using the <b>TweakRange</b> attribute. You need to specify the maximum and the minimum values in the brackets, and use the ```TweakInjector.Inject(this);``` line anywhere in the code (including the constructor).  The generated value will be between 1 and 5, <b>including both 1 and 5.</b> (in the Random class, the maximum integer value *is not included*).
 ### TweakTrue
 <b>TweakTrue</b> attribute allows you to generate a boolean value with a certain chance. ```[TweakTrue(0.9)]``` means that WillChasePlayer field has 90% chance to be true. isLucky field, however, has the default 50%, since no probability value is specified.
-###TweakInjector.Inject
+### TweakInjector.Inject
 Finally, you need to invoke  ```TweakInjector.Inject(this)```  to pass the instance to the static class TweakInjector. All the fields and properties marked with the Tweak attributes will be injected.
 
-#Tricky Example
+# Tricky Example
 Here is the new Monster class:
 ```csharp
     public class TrickyMonster : MonoBehaviour
