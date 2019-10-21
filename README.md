@@ -52,7 +52,8 @@ Here is the new Monster class:
         }
     }
 ```
-###TweakDeviate
+
+### TweakDeviate
 TweakDeviate attribute allows you to get the initial value defined for the value and update it by a certain percent.
 If only one value is specidied for the attribute, the new value will be:
 *old value - (old value • percent) ≤ old value ≤ old value + (old value • percent)*
@@ -64,7 +65,7 @@ By specifying <b>2 parameters</b> for the attribute, you set up the Up Percent a
 In our example, the injected value for the speed will be between 70 and 105.
 
 In Unity, the TweakDeviate attribute can be used in conjunction with another reflection-based tools such as [Zenject](https://github.com/modesttree/Zenject). Since Zenject code runs prior any other code in the scene, you can Inject the default values using Zenject and then randomize it with RTweak.
-###TweakInjector.Inject(object, Action) overload
+### TweakInjector.Inject(object, Action) overload
 If you use TweakDeviate several times for the same object, the initial value will be different on each use. This might be a problem, since the the value can become too big or too small for a certain type.
 To handle that, you can pass the method that returns the object to the initial state to the Inject method. The method will be invoked before the actual inject.
 This overload is especially useful if you use the Object Pool pattern.
